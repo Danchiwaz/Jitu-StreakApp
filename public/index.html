@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="container__right">
+                <button id="toggleBtn" class="toggle_btn" data-aos="zoom-out-down" data-aos-duration="2000">
+                    <ion-icon name="add-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="container__left">
+                <!-- main content  -->
+                <div id="displayHero" class="main__section" data-aos="flip-left" data-aos-duration="2000">
+                    <div class="container__hero">
+                        <div class="image__container">
+                            <img class="hero__image" src="https://streaksapp.com/images/demo2-with-watch.png" alt="" />
+                        </div>
+                        <div class="container__description">
+                            <h2>Welcome to My Streak Counter</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end of main content  -->
+                <div id="displayForm" class="helper_toggle">
+                    <div class="container__form" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="container__form-icon">
+                            <div class="icon"><ion-icon name="list-outline"></ion-icon></div>
+                            <p>Add A Todo Here</p>
+                        </div>
+                        <div class="contain__main-form">
+                            <p id="error_message"></p>
+                            <div class="form_head">
+                                <h2>Please Add A task</h2>
+                            </div>
+                            <form action="" id="submitForm">
+                                <div class="form_group">
+                                    <label for="">Task Name</label>
+                                    <input type="text" id="taskName" placeholder="Enter task name" />
+                                </div>
+                                <div class="form_group">
+                                    <label for="">Image</label>
+                                    <input type="text" id="taskImage" placeholder="Enter task imageUrl" />
+                                </div>
+                                <div class="form_group">
+                                    <label for="">Start Date</label>
+                                    <input type="Date" id="taskStartDate" placeholder="Enter start date" />
+                                </div>
+                                <div class="form_group">
+                                    <button type="submit" id="BtnSubmit" class="submitBtn">Add Task</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_streaks">
+            <div class="holdBestStreak">
+                <div id="bestStreak"></div>
+            </div>
+            <div class="streaksContain">
+                <div id="definition_text">
+                    <p class="status_desc">You Don't Have Any Activity!!!</p>
+                </div>
+                <div id="streakItems"></div>
+            </div>
+        </div>
+
+        <div id="modalWindow"></div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script type="module" src="/dist/classes/ActionClass.js"></script>
+    </body>
+</html>
