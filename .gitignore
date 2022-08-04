@@ -1,3 +1,5 @@
 nodeApi
 dist
 
+.prettierrc
+.vscode
